@@ -1,28 +1,14 @@
-﻿@using SandBox.Models
-@model IEnumerable<Doramas>
+﻿@using SandBox.ViewModels
+@model DoramasViewModel
 
+<h1>Все дорамы</h1>
+<h3>@Model.CurrCategory</h3>
 @{
-    Layout = null;
-
+    foreach (var dorama in Model.AllDoramas)
+    {
+        <div>
+            <h3>Название: @dorama.Name </h3>
+            <p></p>
+        </div>
+    }
 }
-
-<DOCTYPE html>
-    <html>
-    <head>
-        <meta name="viewport" content="width-device-width" />
-        <title>List</title>
-    </head>
-    <body>
-        <h2>Все дорамы</h2>
-        @{
-            foreach (var dorama in Model)
-            {
-                <div>
-                    <h2>Название: @dorama.Name </h2>
-                    <p></p>
-                </div>
-            }
-        }
-    </body>
-</html>
-</DOCTYPE>

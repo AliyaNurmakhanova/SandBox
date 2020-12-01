@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SandBox.Interfaces;
+using SandBox.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,8 +20,11 @@ namespace SandBox.Controllers
         }
         public ViewResult List()
         {
-            var doramas = _allDoramas.Doramas;
-            return View(doramas);
+            ViewData["Title"] = "Doramas";
+            DoramasViewModel Obj = new DoramasViewModel();
+            Obj.AllDoramas = _allDoramas.Doramas;
+            Obj.CurrCategory = "Doramas";
+            return View(Obj);
         }
     }
 }
