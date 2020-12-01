@@ -13,7 +13,10 @@ namespace SandBox.Areas.Identity.Data
         public static void Initial(AppDBContent content)
         {
             if (!content.Category.Any())
+            {
                 content.Category.AddRange(Categories.Select(c => c.Value));
+            }
+
             if (!content.Doramas.Any()) 
             {
                 content.AddRange(
