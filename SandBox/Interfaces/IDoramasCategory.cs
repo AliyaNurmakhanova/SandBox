@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SandBox.Interfaces
 {
-    interface IDoramasCategory
+    public interface IDoramasCategory
     {
         IEnumerable<Category> AllCategories { get; }
     }

@@ -9,7 +9,7 @@ namespace SandBox.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string ShortDesc { get; set; }
+        public string Country { get; set; }
         public string LongDesc { get; set; }
         public string Img { get; set; }
         public string Genre { get; set; }

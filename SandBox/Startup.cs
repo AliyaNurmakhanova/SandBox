@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SandBox.Data;
+using SandBox.Interfaces;
+using SandBox.Mocks;
 
 namespace SandBox
 {
@@ -29,6 +31,8 @@ namespace SandBox
             services.AddMvc();
             services.AddDbContext<SandBoxDbContext>(ops => ops.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=MVCSandBoxDB;Trusted_Connection=True;MultipleActiveResultSets=true"));
             services.AddSession();
+            services.AddTransient<IAllDoramas, MockDoramas>();
+            services.AddTransient<IDoramasCategory, MockCategory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

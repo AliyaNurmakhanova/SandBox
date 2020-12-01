@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SandBox.Interfaces
 {
-    interface IAllDoramas
+    public interface IAllDoramas
     {
         IEnumerable<Doramas> Doramas { get; }
         Doramas getObjectDorama(int DoramaId);
