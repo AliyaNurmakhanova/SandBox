@@ -23,7 +23,7 @@ namespace SandBox.Controllers
             ViewData["Title"] = "Doramas";
             DoramasViewModel Obj = new DoramasViewModel();
             Obj.AllDoramas = _allDoramas.Doramas;
-            Obj.CurrCategory = "Doramas";
+            Obj.CurrCategory = " ";
             return View(Obj);
         }
     }
