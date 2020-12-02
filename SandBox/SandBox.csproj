@@ -5,6 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Repository\**" />
+    <Content Remove="Repository\**" />
+    <EmbeddedResource Remove="Repository\**" />
+    <None Remove="Repository\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Identity\Data\AppDBContent.cs" />
+    <Compile Remove="Areas\Identity\Data\DbObjects.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.10" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
